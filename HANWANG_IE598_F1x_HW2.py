@@ -12,7 +12,7 @@ X = df.drop(['rowindex','contract','squeeze'], axis = 1).values
 # using 0,3 for the size of the test and use a random state of 16
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.3, random_state=16, stratify=y)
 # Create a k-NN classifier with multiple values of neighbors
-k_range = range(1,26)
+k_range = range(1,101)
 scores = []
 for k in k_range:
     knn = KNeighborsClassifier(n_neighbors=k)
